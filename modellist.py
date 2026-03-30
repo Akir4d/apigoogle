@@ -7,7 +7,7 @@ CHIAVE_API = os.environ.get("GEMINI_API_KEY", "LA_TUA_CHIAVE_QUI")
 # Inizializzazione del Client unificato
 client = genai.Client(api_key=CHIAVE_API)
 
-print("🔍 Ricerca dei modelli Gemini testuali...\n")
+print("Ricerca dei modelli Gemini testuali...\n")
 print("-" * 60)
 
 # Otteniamo i modelli
@@ -31,10 +31,10 @@ for model in modelli:
         input_limit = getattr(model, 'input_token_limit', 'N/D')
         output_limit = getattr(model, 'output_token_limit', 'N/D')
         
-        print(f"🤖 Nome API: {nome_pulito}")
-        print(f"🏷️ Display Name: {display_name}")
-        print(f"📥 Max Token in Input: {input_limit}")
-        print(f"📤 Max Token in Output: {output_limit}")
+        print(f"Nome API: {nome_pulito}")
+        print(f"Display Name: {display_name}")
+        print(f"Max Token in Input: {input_limit}")
+        print(f"Max Token in Output: {output_limit}")
         print("-" * 60)
 
 print(f"✅ Trovati {conteggio} modelli Gemini compatibili.")
