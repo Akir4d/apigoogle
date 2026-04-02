@@ -1,5 +1,5 @@
 import requests
-import json
+#import json
  
 # Lista di CVE dal nostro scan Nessus
 cve_list = [
